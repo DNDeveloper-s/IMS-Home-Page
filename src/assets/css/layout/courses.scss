@@ -1,0 +1,167 @@
+@import "../abstracts/variables";
+
+#courses {
+  width: 100vw;
+  position: relative;
+  padding: 15rem 0;
+
+  @media (max-width: $high-medium) {
+    padding: 10rem 0;
+  }
+
+  > .wrapper {
+    position: relative;
+    width: 100%;
+    max-width: $wrapper-maxWidth;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @media (max-width: $extra-large) {
+      zoom: 0.9;
+    }
+
+    @media (max-width: $low-medium) {
+      flex-direction: column;
+    }
+
+    > .left {
+      width: 90%;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 700px;
+
+      @media (max-width: $high-medium) {
+        zoom: 0.7;
+      }
+
+      > .course {
+        height: 190px;
+        width: 25%;
+        background: #ebf5ff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        cursor: pointer;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+
+        &:hover {
+          background: linear-gradient(180deg, rgba(31,123,228,1) 0%, rgba(7,60,121,1) 100%);
+
+          > .svg-holder {
+
+            > svg {
+
+              path {
+                fill: #fff;
+              }
+
+              rect {
+                fill: #fff;
+              }
+            }
+          }
+
+          > .heading {
+
+            > h4 {
+              color: #fff;
+
+              > span {
+                color: rgba(255, 255, 255, 0.9);
+              }
+            }
+          }
+        }
+
+        > .svg-holder {
+          width: 70px;
+          position: relative;
+
+          > svg {
+            width: 100%;
+            max-height: 80px;
+
+            path,
+            rect {
+              fill: rgba(99, 99, 99, 0.81);
+            }
+          }
+        }
+
+        > .heading {
+          margin-top: 1.2rem;
+
+          > h4 {
+            font-size: 1.8rem;
+            text-align: center;
+
+            > span {
+              color: #878787;
+              font-size: 1.4rem;
+            }
+          }
+        }
+
+        &:hover {
+          box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+        }
+
+        &-1 {
+          margin-top: 120px;
+        }
+
+        &-3 {
+          margin-top: 120px;
+        }
+
+        &-5 {
+          margin-top: -80px;
+        }
+
+        &-7 {
+          margin-left: calc(25% + 60px);
+          margin-top: -80px;
+        }
+      }
+    }
+
+    > .right {
+      width: 90%;
+      max-width: 450px;
+
+      @media (max-width: $high-medium) {
+        max-width: 350px;
+      }
+
+      > .heading {
+        max-width: 500px;
+
+        > h3 {
+          background: linear-gradient(180deg, rgba(5, 0, 5, 0.82) 0%, rgb(0, 0, 0) 100%);
+          text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+          -webkit-background-clip: text;
+          color: transparent;
+          font-family: $rob_light;
+          font-size: 5.7rem;
+          margin-bottom: 5rem;
+        }
+      }
+
+      > .content {
+        max-width: 450px;
+
+        > p {
+          font-size: 1.6rem;
+          margin: 10px 0;
+          word-spacing: 4px;
+          line-height: 2.5rem;
+          color: rgba(0, 0, 0, 0.76);
+        }
+      }
+    }
+  }
+}

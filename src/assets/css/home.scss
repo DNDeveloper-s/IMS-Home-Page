@@ -1,0 +1,104 @@
+@import "./abstracts/variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all .3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+html {
+  font-size: 10px;
+  
+  @media (max-width: $highWidth) {
+      font-size: 9px;
+  }
+
+  @media (max-width: $high-medium) {
+    font-size: 8px;
+  }
+}
+
+body {
+  background: $primary-light;
+  font-family: $rob_reg, serif;
+
+  overflow-x: hidden !important;
+  scroll-behavior: smooth;
+}
+
+.back-drop {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  animation: opacityIn .3s ease-in-out forwards;
+
+  &.remove {
+    animation: opacityOut .3s ease-in-out forwards;
+  }
+}
+
+.thatEl {
+  position: absolute;
+  border-radius: 4px;
+  //background: #fff;
+  transform-origin: top;
+  opacity: 0;
+  transform: rotateX(-30deg);
+  z-index: 100;
+  //box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  animation: rotateXIn .36s ease-in-out forwards;
+  zoom: 0.9;
+
+  > svg {
+    height: 100%;
+    width: 100%;
+
+    > g > path {
+      fill: #fff;
+      stroke-dasharray: 200;
+      stroke-dashoffset: 100;
+      stroke-width: 2px;
+      //stroke-dashoffset: 200;
+      stroke: $secondary-color;
+      animation: blankToFulldash 6s ease-in-out forwards infinite;
+    }
+  }
+
+  @media (max-width: $highLowWidth) {
+    zoom: 0.85;
+  }
+
+  @media (max-width: $highMedWidth) {
+    zoom: 0.79;
+  }
+}
+
+.video-content {
+  position: absolute;
+  top: 90px;
+  //top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: $wrapper-maxWidth;
+  height: 90%;
+  max-height: 80vh;
+  overflow: hidden;
+  z-index: 101;
+  display: none;
+  background: #000;
+
+  > iframe {
+    width: 100%;
+    height: 100%;
+  }
+}

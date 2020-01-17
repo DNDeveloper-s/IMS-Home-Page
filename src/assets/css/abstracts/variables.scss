@@ -1,0 +1,38 @@
+$rob_light: 'Roboto_Light';
+$rob_med: 'Roboto_Medium';
+$rob_reg: 'Roboto_Regular';
+$rob_bold: 'Roboto_Bold';
+$rob_cond_bold: 'RobotoCondensed_Bold';
+$rob_cond_light: 'RobotoCondensed_Light';
+$rob_cond_reg: 'RobotoCondensed_Regular';
+$lib_reg: 'LibreFranklin_Regular';
+$lib_bold: 'LibreFranklin_Bold';
+$lib_med: 'LibreFranklin_Medium';
+$lib_light: 'LibreFranklin_Light';
+
+$highWidth: 1440px;
+$highLowWidth: 1318px;
+$highMedWidth: 1000px;
+$highMedLowWidth: 883px;
+
+$wrapper-maxWidth: 1440px;
+
+// Color Theme
+$primary-color: #002046;
+$primary-light: #E0EFFF;
+$primary-dark: #002046;
+$secondary-color: #ff8d13;
+$white: #fff;
+$black: #000;
+$footer-bg: #18252f;
+$normal-shadow: 0 2px 4px rgba(0,0,0,0.3);
+$normal-hover-shadow: 0 -5px 10px rgba(0,0,0,0.4);
+
+$primary-gradient: linear-gradient(180deg, rgba(31,123,228,1) 0%, rgba(7,60,121,1) 100%);
+
+// ViewPorts
+$extra-small: 600px;
+$low-medium: 768px;
+$high-medium: 992px;
+$large: 1200px;
+$extra-large: 1366px;

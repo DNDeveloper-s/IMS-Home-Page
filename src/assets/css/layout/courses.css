@@ -1,0 +1,27 @@
+#courses {
+  width: 100vw;
+  position: relative;
+}
+#courses > .wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+#courses > .wrapper > .left {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#courses > .wrapper > .left > .course {
+  height: 150px;
+  width: 30%;
+  border: 1px solid red;
+}
+#courses > .wrapper > .right {
+  width: 50%;
+}
+
+/*# sourceMappingURL=courses.css.map */

@@ -1,0 +1,13 @@
+#video {
+  width: 99.5vw;
+  background: #fff;
+  position: relative;
+}
+#video > .wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/*# sourceMappingURL=video.css.map */

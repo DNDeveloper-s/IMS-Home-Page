@@ -1,0 +1,169 @@
+@import "../abstracts/variables";
+
+#video {
+  width: 99.5vw;
+  background: #fff;
+  position: relative;
+
+  > .wrapper {
+    width: 100%;
+    max-width: $wrapper-maxWidth;
+    margin: 0 auto;
+    position: relative;
+    padding: 10rem 0;
+
+    @media (max-width: $low-medium) {
+      padding: 10rem 0 6rem;
+    }
+
+    > .heading {
+      width: 100%;
+
+      > h2 {
+        text-align: center;
+        background: $primary-gradient;
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        -webkit-background-clip: text;
+        color: transparent;
+        font-size: 4rem;
+        font-family: $lib_med;
+      }
+    }
+
+    > .alt-content {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 400px;
+
+      @media (max-width: $extra-large) {
+        height: 300px;
+      }
+
+      @media (max-width: $high-medium) {
+        width: 85%;
+        max-width: 760px;
+      }
+
+      @media (max-width: $low-medium) {
+        flex-direction: column;
+        height: auto;
+        margin: 6rem auto;
+
+        &.reverse {
+          flex-direction: column-reverse;
+        }
+      }
+
+      > .img-banner {
+
+        > .video-banner {
+
+          > .video {
+            width: 200px;
+            height: 200px;
+            border-radius: 200px;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+
+            > .image {
+              width: 100%;
+              height: 100%;
+              position: relative;
+
+              &:before {
+                @include pseudo;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.3);
+              }
+
+              > svg {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+
+                > path {
+                  stroke-dasharray: 100;
+                  stroke-dashoffset: 100;
+                  stroke-width: 5px;
+                  //stroke-dashoffset: 200;
+                  stroke: $primary-light;
+                  transform-origin: center;
+                  animation: rotateSVG 20s cubic-bezier(.8,-0.82,.28,1.84) forwards infinite;
+                }
+              }
+
+              > img {
+                //width: 100%;
+                height: 100%;
+                border-radius: 200px;
+              }
+            }
+
+            &:hover {
+
+              > svg {
+
+                 path {
+                  fill: #ff0000;
+                }
+              }
+            }
+
+            > svg {
+              width: 60px;
+              height: 60px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+
+               path {
+                fill: #ff0000;
+              }
+            }
+          }
+        }
+      }
+
+      > .text-content {
+        max-width: 500px;
+
+        @media (max-width: $high-medium) {
+          max-width: 350px;
+        }
+
+        @media (max-width: $low-medium) {
+          margin-top: 2rem;
+        }
+
+        > .heading {
+
+          > h3 {
+            background: linear-gradient(180deg, rgba(5, 0, 5, 0.82) 0%, rgb(0, 0, 0) 100%);
+            text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-family: $lib_reg;
+            font-size: 4rem;
+          }
+        }
+
+        > .content {
+
+          > p {
+            font-size: 1.6rem;
+            margin: 10px 0;
+            word-spacing: 4px;
+            line-height: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}

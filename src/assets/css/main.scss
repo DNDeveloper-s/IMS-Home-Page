@@ -1,0 +1,14 @@
+@import '../../../node_modules/aos/src/sass/aos.scss';
+@import "./abstracts/variables";
+@import "./abstracts/utilities";
+@import "abstracts/mixins";
+@import "abstracts/animations";
+@import "./abstracts/fonts";
+@import "home";
+@import "components/navigation";
+@import "layout/hero";
+@import "layout/about";
+@import "layout/video";
+@import "layout/courses";
+@import "layout/callToAction";
+@import "layout/footer";

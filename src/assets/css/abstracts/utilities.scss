@@ -1,0 +1,130 @@
+@import "../abstracts/variables";
+
+.mt-low {margin-top: 5px}
+.mt-med {margin-top: 10px}
+.mt-reg {margin-top: 15px}
+.mt-lg {margin-top: 20px}
+
+.mb-low {margin-bottom: 5px}
+.mb-med {margin-bottom: 10px}
+.mb-reg {margin-bottom: 15px}
+.mb-lg {margin-bottom: 20px}
+
+.ml-low {margin-left: 5px}
+.ml-med {margin-left: 10px}
+.ml-reg {margin-left: 15px}
+.ml-lg {margin-left: 20px}
+
+.mr-low {margin-right: 5px}
+.mr-med {margin-right: 10px}
+.mr-reg {margin-right: 15px}
+.mr-lg {margin-right: 20px}
+
+.pt-low {padding-top: 5px}
+.pt-med {padding-top: 10px}
+.pt-reg {padding-top: 15px}
+.pt-lg {padding-top: 20px}
+
+.pb-low {padding-bottom: 5px}
+.pb-med {padding-bottom: 10px}
+.pb-reg {padding-bottom: 15px}
+.pb-lg {padding-bottom: 20px}
+
+.pl-low {padding-left: 5px}
+.pl-med {padding-left: 10px}
+.pl-reg {padding-left: 15px}
+.pl-lg {padding-left: 20px}
+
+.pr-low {padding-right: 5px}
+.pr-med {padding-right: 10px}
+.pr-reg {padding-right: 15px}
+.pr-lg {padding-right: 20px}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 10px 50px;
+  font-family: $lib_light;
+  //background: $secondary-color;
+  background: linear-gradient(to right, rgba(255,141,19,1) 0%, rgb(255, 174, 80, 0.3) 61%, rgba(255,141,19,1) 100%);
+  background-size: 200% auto;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: #fff;
+  border-radius: 5px;
+  text-shadow: 0 1px 1px rgba(0,0,0,.3);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+  > svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    background-position: 130%;
+  }
+}
+
+.input-control {
+  position: relative;
+  margin: 2.2rem 0;
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  font-size: 1.5rem;
+
+  > input,
+  > select {
+    outline: none;
+    border: 1px solid #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    font: inherit;
+    padding: 12px 10px;
+    font-size: 1.7rem;
+    color: $secondary-color;
+    letter-spacing: 1px;
+    font-weight: 400;
+    background: transparent;
+    //background: linear-gradient(180deg, rgba(0,0,0,0.4791491596638656) 0%, rgba(0,0,0,0.9956197478991597) 100%);
+    //background: linear-gradient(180deg, rgba(8,94,194,0.7) 0%, rgba(2,44,92,0.7) 100%);
+    border-radius: 2px;
+
+    &:focus,
+    &:valid {
+      //background: linear-gradient(0deg, rgba(0,0,0,0.4791491596638656) 0%, rgba(0,0,0,0.9956197478991597) 100%);
+      //background: linear-gradient(0deg, rgba(8,94,194,0.7) 0%, rgba(2,44,92,0.7) 100%);
+
+      ~ label {
+        color: $secondary-color;
+        //background: linear-gradient(180deg, #000000 0%, #002147 100%);
+        //text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        //-webkit-background-clip: text;
+        //color: transparent;
+        top: -10px;
+        font-size: 1.4rem;
+        left: 2px;
+        font-weight: 900 ;
+      }
+    }
+
+    > option {
+      color: $secondary-color;
+    }
+  }
+
+  > label {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 11px;
+    color: rgba(233, 244, 255, 0.68);
+    font-family: $lib_reg;
+    pointer-events: none;
+  }
+}
